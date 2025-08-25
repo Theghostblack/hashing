@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Hashing World</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Header Styling */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #0078D7;
+            padding: 1rem 2rem;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        /* Navigation Links */
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #A8DFFF;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .auth-buttons button {
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            color: #0078D7;
+            background-color: white;
+            border: 2px solid white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .auth-buttons button:hover {
+            background-color: #0056A3;
+            color: white;
+            border-color: #0056A3;
+        }
+        /* Hamburger Menu */
+        .menu-icon {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-icon div {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+        }
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                width: 100%;
+                text-align: center;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background-color: #0078D7;
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem 0;
+                z-index: 999;
+            }
+
+            .nav-links a {
+                font-size: 1.2rem;
+            }
+
+            .menu-icon {
+                display: flex;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .auth-buttons {
+                display: none;
+            }
+        }
+
+        /* Main Content Styling */
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        main h2 {
+            color: #0078D7;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        main p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1.2rem;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #0078D7;
+            color: white;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <h1>#Hashing World</h1>
+        <nav class="nav-links">
+            <a href="hashing_world.html">Home</a>
+            <a href="convert.html">Convert</a>
+            <a href="hash.html">Hash INFO</a>
+            <a href="quizzes.html">Quizzes</a>
+            <a href="about.html">About</a>
+        </nav>
+        <div class="auth-buttons">
+            <button onclick="login()">Login</button>
+            <button onclick="signUp()">Sign Up</button>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h2>About Hashing World</h2>
+        <p><strong>Hashing World</strong> is an innovative platform designed to explore the world of cryptographic hashing, data manipulation, and file conversion. Whether you're a beginner or an expert, this project provides tools and resources to enhance your understanding of hashing algorithms, such as SHA-256, MD5, and others.</p>
+
+        <p>The project includes various features such as online certifications, file conversion utilities, quizzes to test your knowledge, and more. It offers a user-friendly interface, making complex processes accessible to everyone.</p>
+
+        <p>This project was created by <strong>Pranshu Dubey</strong> as part of my journey to contribute to the world of cryptography and web development. Hashing World combines my interest in both these areas, and I hope it helps many users to learn and experiment with hashing concepts and tools in a fun and interactive way!</p>
+
+        <p>Feel free to explore the platform and make use of the various tools we offer. Happy hashing!</p>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Pranshu Dubey. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+         function login() {
+        window.location.href = "login.html"; // Redirect to login.html
+    }
+
+    function signUp() {
+        window.location.href = "sign-up.html"; // Redirect to sign-up.html
+    }
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
